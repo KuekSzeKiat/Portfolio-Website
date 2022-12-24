@@ -1,0 +1,962 @@
+/*
+html {
+    height: 125vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+.sect{
+    scroll-snap-align: start;
+}
+*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+/* Navbar Styling */
+.nav-bar{
+    position: fixed;
+    width: 100%;
+    padding: 30px 0;
+    z-index: 99;
+    transition: all 0.5s ease;
+}
+
+.nav-bar.sticky{
+    padding: 15px 0;
+    background: black;
+}
+
+.nav-bar-container{
+    padding: 0 80px;
+    margin: auto;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+}
+
+.nav-bar .nav-bar-logo{
+    font-size: 35px;
+    font-weight: 600;
+    color: white;
+}
+
+.nav-bar .nav-bar-menu{
+    margin-bottom: 0;
+}
+
+.nav-bar .nav-bar-menu li{
+    list-style: none;
+    display: inline-block;
+    transition: all 0.5s;
+}
+
+.nav-bar .nav-bar-menu li a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: all 0.5s;
+}
+
+.nav-bar .nav-bar-menu li:hover{
+    transform: translateY(-5px);
+}
+
+.nav-bar .nav-bar-menu li a:hover{
+    color: crimson;
+}
+
+.menu-btn{
+    color: white;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+
+
+.sect {
+    width: 100%;
+    min-height: 100vh; /* Extend element height when content overflow */
+}
+
+#aboutme, #experiences, #technicalskills, #projects, #contactme{
+    padding: 80px 0;
+}
+
+/* Home section styling */
+.bg {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    object-fit: cover;
+}
+
+.home-text {
+    width: 100%;
+    height: 100vh;
+    color: white;
+    position:relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:column;
+}
+
+.text-1 {
+    font-size: 27px;
+}
+
+.text-2 {
+    font-size: 75px;
+    font-weight: 600;
+}
+
+.text-3 {
+    font-size: 40px;
+}
+
+.home-text a button{
+    margin-top: 5vh;
+    padding: 12px 36px;
+    background: crimson;
+    font-size: 25px;
+    color: white;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+}
+
+.home-text a button:hover{
+    background: none;
+}
+
+/* About Me Section styling */
+#aboutme{
+    background-color:#171321;
+}
+
+.aboutme-heading{
+    position: relative;
+    color:white;
+    font-size: 40px;
+    font-weight: 500;
+    text-align: center;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.aboutme-heading::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left:50%;
+    width: 250px;
+    height: 4px;
+    background: #FFE742;
+    transform:translateX(-50%)
+}
+
+.aboutme-heading::after{
+    content: " who i am ";
+    position: absolute;
+    font-size: 25px;
+    bottom: -14px;
+    padding: 0 5px;
+    left:50%;
+    color: white;
+    background: #171321;
+    transform:translateX(-50%)
+}
+
+.profilepic{
+    height: 50vh;
+}
+
+.aboutme-content{
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 50px;
+    text-align:justify;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.aboutme-text{
+    padding-left: 40px;
+    margin-right: 30px;
+    color: white;
+}
+
+.aboutme-text p{
+    text-align: justify;
+    display: inline-block;
+}
+
+.aboutme-text1{
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+.text-bold{
+    font-weight:bold;
+    color: crimson;
+}
+
+.aboutme-button a button{
+    margin-top: 5vh;
+    padding: 10px 30px;
+    background: crimson;
+    font-size: 25px;
+    color: white;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+}
+
+.aboutme-button a button:hover{
+    background: none;
+}
+
+/* Experiences Section */
+#experiences{
+    background-color:#0D314A;
+}
+
+.experiences-heading{
+    position: relative;
+    color:white;
+    font-size: 40px;
+    font-weight: 500;
+    text-align: center;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.experiences-heading::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left:50%;
+    width: 400px;
+    height: 4px;
+    background: #FFE742;
+    transform:translateX(-50%)
+}
+
+.experiences-heading::after{
+    content: " where I learnt ";
+    position: absolute;
+    font-size: 25px;
+    bottom: -14px;
+    left:50%;
+    color: white;
+    padding: 0 5px;
+    background: #0D314A;
+    transform:translateX(-50%)
+}
+
+.experiences-container{
+    margin: 0 30px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.experience-card{
+    display: flex;
+    flex-wrap: wrap;
+    flex: 0 0 50%;
+    max-width: 50%;
+    margin-top: 20px;
+    padding: 0 15px;
+}
+
+.experience-title{
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 30px;
+    text-align: center;
+    width: 100%
+}
+
+.timeline-box{
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+}
+
+.timeline{
+    padding: 30px 15px;
+    border: 2px solid crimson;
+    border-radius: 15px;
+    box-shadow: 0 0 20px #8464b2;
+    width: 100%;
+    position: relative;
+    color: white;
+}
+
+.timeline-item{
+    position: relative;
+    padding-left: 37px;
+    padding-bottom: 50px;
+}
+
+.timeline-item:last-child{
+    padding-bottom: 0;
+}
+
+.timeline-item::before{
+    content:"";
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    left: 7px;
+    top: 0;
+    background-color: crimson;
+}
+
+.circle-dot{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: crimson;
+}
+
+.timeline-date{
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.timeline-date span{
+    margin-left: 5px;
+}
+
+.timeline-title{
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.timeline-text{
+    line-height: 25px;
+    font-size: 16px;
+    text-align: justify;
+
+}
+
+/* technical skills section */
+
+#technicalskills{
+    background-color:#171321;
+}
+
+.skills-heading{
+    position: relative;
+    color:white;
+    font-size: 40px;
+    font-weight: 500;
+    text-align: center;
+    padding-bottom: 20px;
+    margin-bottom: 70px;
+}
+
+.skills-heading::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left:50%;
+    width: 350px;
+    height: 4px;
+    background: #FFE742;
+    transform:translateX(-50%)
+}
+
+.skills-heading::after{
+    content: " what I know ";
+    position: absolute;
+    font-size: 25px;
+    bottom: -14px;
+    left:50%;
+    color: white;
+    padding: 0 5px;
+    background: #171321;
+    transform:translateX(-50%);
+}
+
+
+.skill-box{
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 0 30px;
+    transition: 0.5s all ease;
+}
+
+.skill-box:hover{
+    scale: 1.1;
+    cursor:context-menu;
+}
+
+.skill-logo{
+    color: white;
+    font-size: 6em;
+}
+
+.skill-box p{
+    font-size: 1.5em;
+}
+
+.owl-dots{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.owl-dot{
+    height: 13px;
+    width: 13px;
+    margin: 0 5px;
+    outline: none!important;
+    border-radius: 50%;
+    border: 2px solid #FFE742!important;
+    transition: 0.5s all ease;
+}
+
+.owl-dot.active{
+    width: 35px;
+    border-radius: 14px;
+}
+
+.owl-dot.active, .owl-dot:hover{
+    background: #FFE742!important;
+}
+
+/* Project Section */
+#projects{
+    background-color:#0D314A;
+}
+
+.projects-heading{
+    position: relative;
+    color:white;
+    font-size: 40px;
+    font-weight: 500;
+    text-align: center;
+    padding-bottom: 20px;
+    margin-bottom: 70px;
+}
+
+.projects-heading::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left:50%;
+    width: 200px;
+    height: 4px;
+    background: #FFE742;
+    transform:translateX(-50%)
+}
+
+.projects-heading::after{
+    content: " what I did ";
+    position: absolute;
+    font-size: 25px;
+    bottom: -14px;
+    left:50%;
+    color: white;
+    padding: 0 5px;
+    background: #0D314A;
+    transform:translateX(-50%);
+}
+
+.projects-container{
+    margin: 0 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.project-card {
+    background: #171321;
+    border-radius: 10px;
+    margin: 0 15px 30px;
+    width: 25%;
+    position: relative;
+    transition: transform 0.5s;
+    border: 2px solid crimson;
+    box-shadow: 0 0 20px #8464b2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+.project-image img{
+    height: calc(100%-60px);
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.project-card:hover{
+    transform: scale(1.1);
+}
+  
+.project-title {
+    font-size: 20px;
+    padding: 20px 0;
+    color: white;
+    text-align: center;
+    margin: auto;
+}
+
+.layer{
+    background: linear-gradient(rgba(0,0,0,0.6), crimson);
+    color: white;
+    width: 100%;
+    height: 0;
+    padding: 0 10px;
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: justify;
+    transition: height 0.5s;
+}
+
+.layer div{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.layer div a{
+    font-size: 16px;
+    background-color: white;
+    line-height: 30px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    transition: all 0.5s ease;
+}
+
+.layer div a:hover{
+    color: crimson;
+    transform: translateY(-5px)
+}
+
+.project-card:hover .layer{
+    height: 100%;
+}
+
+/* Contact Me Section */
+
+#contactme{
+    background-color:#171321;
+} 
+
+.contactme-heading{
+    position: relative;
+    color:white;
+    font-size: 40px;
+    font-weight: 500;
+    text-align: center;
+    padding-bottom: 20px;
+    margin-bottom: 70px;
+}
+
+.contactme-heading::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left:50%;
+    width: 350px;
+    height: 4px;
+    background: #FFE742;
+    transform:translateX(-50%)
+}
+
+.contactme-heading::after{
+    content: " get in touch ";
+    position: absolute;
+    font-size: 25px;
+    bottom: -14px;
+    left:50%;
+    color: white;
+    padding: 0 5px;
+    background: #171321;
+    transform:translateX(-50%);
+}
+
+.contactme-container{
+    display: flex;
+    margin-left: 30px;
+    flex-wrap: wrap;
+}
+
+.contact-left{
+    flex-basis: 30%;
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+
+.contact-left a{
+    background: none;
+    color: white;
+    margin-bottom: 30px;
+    width: 100%;
+    display: flex;
+    transition: all 0.5s ease;
+}
+
+.contact-left a:active, .contact-left a:hover{
+    color: crimson;
+    transform: translateY(-5px);
+}
+
+.contactme-logo{
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+.contact-right{
+    flex-basis: 65%;
+}
+
+.contact-right form{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.field-left, .field-right{
+    width: 47%
+}
+
+.field-left{
+    margin-right: 30px
+}
+
+.message{
+    width: 100%;
+}
+
+form label{
+    width: 100%;
+    color: white;
+    margin-bottom: 10px;
+}
+
+form input, form textarea{
+    border: 0;
+    outline: none;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: white;
+    color: black;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+form input{
+    width: 100%
+}
+
+form textarea{
+    width: calc(94% + 30px);
+}
+
+form button{
+    padding: 12px 36px;
+    background: crimson;
+    font-size: 25px;
+    color: white;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+}
+
+form button:hover{
+    background: none;
+}
+
+#msg{
+    color: white;
+    display: block;
+    width: 100%;
+}
+
+/* Upward button */
+
+.upward-button{
+    position: fixed;
+    bottom: 10px;
+    right: 10pX;
+    transition: 0.5s scale ease
+}
+
+.upward-button a{
+    color: crimson;
+    text-decoration: none;
+    padding: 3px 13px;
+    font-size: 250%;
+    line-height: 60px;
+    background: white;
+    border-radius: 50%;
+    text-align: center;
+    width: 10%;
+    height: 10vh;
+}
+
+.upward-button:hover{
+    scale: 1.1;
+    border: 2px solid crimson;
+    border-radius: 50%;
+}
+
+@media only screen and (max-width: 1100px){
+    .menu-btn{
+        display:block;
+        z-index: 999;
+    }
+
+    .menu-btn .menu-close.active:before{
+        content: "\f00d";
+        z-index: 1000;
+    }
+
+    .nav-bar .nav-bar-menu{
+        position: fixed;
+        height: 100vh;
+        width: 30%;
+        right: -100%;
+        top: 0;
+        background-color: black;
+        text-align: center;
+        padding-right: 25px;
+        padding-top: 80px;
+        transition: all 0.5s ease;
+    }
+
+    .nav-bar .nav-bar-menu.active{
+        right: 0;
+    }
+
+    .nav-bar .nav-bar-logo.active{
+        visibility: hidden;
+    }
+    
+    .nav-bar.active{
+        background: none;
+    }
+
+    .nav-bar .nav-bar-menu li{
+        display: block;
+    }
+
+    .nav-bar .nav-bar-menu li a{
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+    .nav-bar .nav-bar-menu li a{
+        font-size: 15px;
+    }
+    
+    .nav-bar-container{
+        padding: 0 30px
+    }
+
+    .nav-bar-logo{
+        font-size: 20px;
+    }
+
+    .menu-btn{
+        font-size: 15px;
+    }
+
+    .home-text{
+        align-items: flex-start;
+        padding-left: 30px;
+        padding-top: 30px;
+    }
+
+    .text-1 {
+        font-size: 20px;
+    }
+     
+    .text-2 {
+        font-size: 60px;
+        font-weight: 500;
+    }
+      
+    .text-3 {
+        font-size: 30px;
+    }
+      
+    .home-text a button{
+        padding: 12px 36px;
+        font-size: 25px;
+      }
+
+    .profilepic{
+        height: 40vh;
+        padding-right: 20px;
+        margin-bottom: 30px;
+    }
+
+    .aboutme-content{
+        text-align:justify;
+        flex-direction: column;
+    }
+
+    .aboutme-button{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .experiences-container{
+        flex-direction: column;
+    }
+    .experience-card{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .project-card{
+        width: 30%;
+    }
+
+    .contact-left{
+        flex-basis: 100%;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .contact-left a{
+        width: 45%;
+    }
+
+    .contact-right{
+        flex-basis: 100%;
+    }
+
+    .field-left, .field-right{
+        width: 45%
+    }
+
+    form textarea{
+        width: calc(90% + 30px);
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .nav-bar .nav-bar-logo{
+        font-size: 18px;
+        font-weight: 300;
+    }
+    
+    .nav-bar .nav-bar-menu li a{
+        font-size: 13px;
+        font-weight: 500;
+
+    }
+
+    .text-1 {
+        font-size: 16px;
+    }
+    
+    .text-2 {
+        font-size: 40px;
+        font-weight: 300;
+    }
+    
+    .text-3 {
+        font-size: 23px;
+    }
+    
+    .home-text a button{
+        padding: 5px 15px;
+        font-size: 15px;
+    }
+
+    .aboutme-text p{
+        text-align: justify;
+        font-size: 15px;
+        display: block;
+    }
+    
+    .aboutme-text1{
+        font-size: 20px;
+    }
+
+    .aboutme-text1 p{
+        font-size: 20px;
+        margin-bottom: 0px;
+    }
+
+    .text-bold{
+        width: 100%;
+    }
+
+    .aboutme-button a button{
+        margin-top: 5vh;
+        padding: 5px 15px;
+        background: crimson;
+        font-size: 15px;
+        color: white;
+        border-radius: 6px;
+        border: 2px solid crimson;
+        transition: all 0.3s ease;
+    }
+
+    .project-card{
+        width: 100%;
+    }
+
+    .experiences-heading::before{
+        width: 300px;
+    }
+
+    .contact-left a{
+        width: 100%;
+    }
+
+    form button{
+        padding: 5px 15px;
+        font-size: 15px;
+    }
+
+    .upward-button a{
+        padding: 1px 6px;
+        font-size: 125%;
+        line-height: 30px;
+        border-radius: 50%;
+        width: 5%;
+        height: 5vh;
+    }
+}

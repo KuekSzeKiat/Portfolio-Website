@@ -1,0 +1,412 @@
+First Class Honours Graduate with a degree in Chemical Engineering. Strong team
+player who can also work independently in adopting a practical approach using
+own initiative. Currently looking to start a career as a junior software
+engineer in fullstack development.
+
+<div class="sect" id="education">
+  <div class="education-heading">EDUCATION & EXTRACURRICULAR</div>
+  <div class="education-content">
+    <div name="school-1" class="education-card-left">
+      <div class="education-card-image logo-school-1"></div>
+      <h3>Foundation Certificate in Software Engineering</h3>
+      <p>October 2022 - November 2022</p>
+      <button
+        name="school-2"
+        value="school-1"
+        onClick="expandEducationCard(value)"
+        class="education-content-button"
+      >
+        Click to Read More
+      </button>
+    </div>
+    <div name="school-1" class="education-card-right hid" id="details-school-1">
+      <ol>
+        <li>
+          Created a 2-player terminal-based tic-tac-toe using JavaScript which
+          is playable on either Window or Mac.
+        </li>
+        <li>
+          Studied Titanic Survival Rate using SQLite and deduced the
+          relationship between gender, economic status and etc. with survival
+          rate.
+        </li>
+        <li>
+          Built responsive web CV using HTML and beautifying it with CSS and
+          Bootstrap
+        </li>
+      </ol>
+      <button
+        class="education-content-button"
+        value="school-1"
+        onClick="collapseEducationCard(value)"
+      >
+        Click to Return
+      </button>
+    </div>
+    <div name="school-2" class="education-card-left">
+      <div class="education-card-image logo-school-2"></div>
+      <h3>Bachelor of Engineering (Honours) Chemical Engineering</h3>
+      <p>October 2016 – October 2020</p>
+      <button
+        name="school-1"
+        value="school-2"
+        onClick="expandEducationCard(value)"
+        class="education-content-button"
+      >
+        Click to Read More
+      </button>
+    </div>
+    <div name="school-2" class="education-card-right hid" id="details-school-2">
+      <div class="education-content">
+        <ol>
+          <li>
+            Final Year Project – Developed a Fortran Subroutine in Aspen Plus
+            for Simulation of Pervaporation Process for Binary Mixtures. Managed
+            to simulate the process successfully with a percentage error of 5%.
+          </li>
+          <li>
+            Developed a terminal based application to manage the bookstore
+            inventory with C++ which able to save at least 50% of the
+            storekeeper inventory checking time. Utilised read and edit on txt
+            file as an inventory checklist.
+          </li>
+        </ol>
+        <button
+          class="education-content-button"
+          value="school-2"
+          onClick="collapseEducationCard(value)"
+        >
+          Click to Return
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="sect" id="workingexperiences">
+  <div class="work-heading">WORKING EXPERIENCES</div>
+  <div class="work-title collapsible">
+    <div class="work-logo-seg">
+      <img
+        class="company-logo-1"
+        src="./topglove_logo.png"
+        alt="Top Glove Logo"
+      />
+    </div>
+    <div class="work-title-description">
+      <h3>Process Engineer</h3>
+      <p>March 2022 - October 2022</p>
+    </div>
+  </div>
+  <div class="work-content">
+    <ol>
+      <li>
+        Carry out projects and research related to process improvement, cost
+        savings and optimization to produce high quality products at efficient
+        low cost.
+      </li>
+      <p>Achievements/ Projects Involved:</p>
+      <ol type="i">
+        <li>Successfully achieved cost savings of RM 200k in 2021.</li>
+        <li>
+          Automated glove weight sampling process and provided tailored-chemical
+          auto dosing system to improve glove weight control.
+        </li>
+        <li>
+          Worked in a team of 4 to display glove weight data in PowerBI,
+          providing a more direct method for data validation and visualisation.
+        </li>
+        <li>
+          Introduced Real Time Measurement of Latex TSC% data using Brixmeter
+          and achieved an accuracy of ± 0.2%.
+        </li>
+      </ol>
+      <li>
+        Collaborating with all levels of organization in implementing new
+        project/ technology and rolling out existing projects to all the
+        factories
+      </li>
+    </ol>
+  </div>
+  <div class="work-title collapsible">
+    <div class="work-logo-seg">
+      <img
+        class="company-logo-2"
+        src="./pcsb_logo.png"
+        alt="Precision Control Logo"
+      />
+    </div>
+    <div class="work-title-description">
+      <h3>Engineering Intern</h3>
+      <p>October 2019 - December 2019</p>
+    </div>
+  </div>
+  <div class="work-content">
+    <ol>
+      <li>
+        Designed Human Machine Interface using Citect for factory SCADA system
+        and ensured that it’s able to update according to the IO data.
+      </li>
+      <li>Assist the Engineer Team in Project Commissioning</li>
+      <li>
+        Design Process Flow Diagram based on SCADA Human Machine Interface.
+      </li>
+    </ol>
+  </div>
+  <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+        }
+      });
+    }
+  </script>
+</div>
+
+<script>
+  //Function for education card
+
+  function expandEducationCard(value) {
+    if (value === "school-1") {
+      let elements = document.getElementsByName("school-2");
+      for (let i = 0; i < elements.length; i++) {
+        elements[i].classList.add("hid");
+      }
+      let detail = document.getElementById("details-school-1");
+      detail.classList.remove("hid");
+    } else {
+      let elements = document.getElementsByName("school-1");
+      for (let i = 0; i < elements.length; i++) {
+        elements[i].classList.add("hid");
+      }
+      let detail = document.getElementById("details-school-2");
+      detail.classList.remove("hid");
+    }
+  }
+  function collapseEducationCard(value) {
+    if (value === "school-1") {
+      let elements = document.getElementsByName("school-2");
+      for (let i = 0; i < elements.length; i++) {
+        elements[i].classList.remove("hid");
+      }
+    } else {
+      let elements = document.getElementsByName("school-1");
+      for (let i = 0; i < elements.length; i++) {
+        elements[i].classList.remove("hid");
+      }
+    }
+    let detail1 = document.getElementById("details-school-1");
+    detail1.classList.add("hid");
+    let detail2 = document.getElementById("details-school-2");
+    detail2.classList.add("hid");
+  }
+</script>
+
+<style>
+  /* past decoration for educantion and working experiences section */
+
+  #education {
+    background-color: #0d314a;
+  }
+
+  .education-heading {
+    position: relative;
+    color: white;
+    font-size: 40px;
+    font-weight: 500;
+    text-align: center;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+
+  .education-heading::before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 650px;
+    height: 4px;
+    background: #ffe742;
+    transform: translateX(-50%);
+  }
+
+  .education-heading::after {
+    content: " where I studied ";
+    position: absolute;
+    font-size: 25px;
+    bottom: -14px;
+    left: 50%;
+    color: white;
+    padding: 0 5px;
+    background: #0d314a;
+    transform: translateX(-50%);
+  }
+
+  .education-content {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .education-card-image {
+    border-radius: 15px 15px 0 0;
+    background: none;
+    width: 100%;
+    height: 30vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .logo-school-1 {
+    background-image: url("./talentlabs_logo.png");
+  }
+
+  .logo-school-2 {
+    background-image: url("./utar_logo.jpg");
+  }
+
+  .education-card-left {
+    width: 40%;
+    background-color: #171321;
+    margin: 20px 0 20px 30px;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    color: white;
+  }
+
+  .education-card-left:hover {
+    scale: 1.1;
+  }
+
+  .education-content-button {
+    width: 100%;
+    transition: all 0.3s ease;
+    border-radius: 15px;
+    background-color: crimson;
+    border: 2px solid crimson;
+    color: white;
+  }
+
+  .education-content-button:hover {
+    background: none;
+  }
+
+  .education-card-right {
+    width: 50%;
+    background-color: #171321;
+    color: white;
+    margin: 20px 0;
+    border-radius: 15px;
+  }
+
+  .hid {
+    display: none;
+  }
+
+  #workingexperiences {
+    background-color: #171321;
+  }
+
+  .work-heading {
+    position: relative;
+    color: white;
+    font-size: 40px;
+    font-weight: 500;
+    text-align: center;
+    padding-bottom: 20px;
+    margin-bottom: 70px;
+  }
+
+  .work-heading::before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 500px;
+    height: 4px;
+    background: #ffe742;
+    transform: translateX(-50%);
+  }
+
+  .work-heading::after {
+    content: " where I worked ";
+    position: absolute;
+    font-size: 25px;
+    bottom: -14px;
+    left: 50%;
+    color: white;
+    padding: 0 5px;
+    background: #171321;
+    transform: translateX(-50%);
+  }
+
+  .work-title {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    margin: 30px 30px 0 30px;
+    border-radius: 10px;
+  }
+
+  .work-title-description {
+    width: 50%;
+  }
+
+  .work-title-description h3,
+  p {
+    text-align: center;
+  }
+
+  .work-logo-seg {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .company-logo-1 {
+    height: 15vh;
+  }
+
+  .work-content {
+    border-radius: 10px;
+    background-color: #0d314a;
+    color: white;
+    margin-left: 30px;
+    margin-right: 30px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+  }
+
+  .work-title.collapsible {
+    cursor: pointer;
+    border: none;
+  }
+
+  .work-title.active,
+  .work-title.collapsible:hover {
+    border: 2px solid crimson;
+  }
+
+  .work-title.collapsible:after {
+    content: "\002B";
+    color: black;
+    font-size: 50px;
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: 15px;
+  }
+
+  .work-title.active:after {
+    content: "\2212";
+  }
+</style>
