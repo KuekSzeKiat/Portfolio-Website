@@ -547,11 +547,11 @@ html {
 }
 
 .layer div a{
-    font-size: 16px;
+    font-size: 24px;
     background-color: white;
-    line-height: 30px;
-    width: 30px;
-    height: 30px;
+    line-height: 45px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
     text-align: center;
     transition: all 0.5s ease;
@@ -776,7 +776,13 @@ form button:hover{
         margin: 20px 0;
         font-size: 25px;
     }
-
+    
+    .layer div a{
+        font-size: 16px;
+        line-height: 30px;
+        width: 30px;
+        height: 30px;
+    }
 }
 
 @media only screen and (max-width: 768px) {
